@@ -1,5 +1,6 @@
 #include "main.h"
 #include "Car.h"
+#include "Security.h"
 
 int main() {
 	Car car1;
@@ -26,6 +27,17 @@ int main() {
 	
 	cout << endl;
 	cout << car1.getInfo();
+
+	Security security;
+
+	security.letCarOut(&car1);
+
+	cout << car1.getInfo();
+
+	security.letCarIn(&car1);
+	
+	cout << car1.getInfo();
+
 
 	return 0;
 }
