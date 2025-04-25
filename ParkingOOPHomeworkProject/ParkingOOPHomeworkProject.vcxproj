@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Car.h" />
+    <ClInclude Include="Initializer.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Security.h" />
   </ItemGroup>

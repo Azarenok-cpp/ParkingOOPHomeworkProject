@@ -12,26 +12,19 @@ public:
 	bool onParkingNow;
 
 	//Default constructor
-	Car() {
-		brand = "Not added";
-		model = "Not added";
-		age = 1;
-		price = 1000;
-		unbroken = true;
-		storageTime = 1;
-		onParkingNow = true;
+	Car() : Car("Not added", "Not added", 1, 1000, true, 1, true) {
 	}
 
 	//Canonic constructor
-	Car(string br, string m, int ag, int pr, bool unbr,
-		int stTime, bool onParking) {
-		brand = br;
-		model = m;
-		age = ag;
-		price = pr;
-		unbroken = unbr;
-		storageTime = stTime;
-		onParkingNow = onParking;
+	Car(string brand, string model, int age, int price, bool unbroken,
+		int storageTime, bool onParkingNow) {
+		this->brand = brand;
+		this->model = model;
+		this->age = age;
+		this->price = price;
+		this->unbroken = unbroken;
+		this->storageTime = storageTime;
+		this->onParkingNow = onParkingNow;
 	}
 
 	//Destructor
@@ -40,8 +33,8 @@ public:
 	}
 
 	string getInfo() {
-		string msg = "Brand: " + brand + "\nModel: " + model + "\nAge: "
-			+ to_string(age) + "\nPrice: " + to_string(price) + "\nStatus: "
+		string msg = "Brand: " + brand + "; Model: " + model + "\nAge: "
+			+ to_string(age) + "; Price: " + to_string(price) + "\nStatus: "
 			+ (unbroken ? "unbroken" : "after an accident")
 			+ "\nWill be stored for " + to_string(storageTime) + " days"
 			+ "\nIs on the parking right now: " + (onParkingNow ? "yes" : "no")
