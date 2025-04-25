@@ -8,5 +8,4 @@ public:
 	void letCarIn(Car* car) {
 		car->onParkingNow = true;
 	}
-	
 };
