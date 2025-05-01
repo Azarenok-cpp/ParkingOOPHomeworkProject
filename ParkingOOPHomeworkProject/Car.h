@@ -2,7 +2,7 @@
 #include "main.h"
 
 class Car {
-public:
+private:
 	string brand;
 	string model;
 	int age;
@@ -10,7 +10,7 @@ public:
 	bool unbroken;
 	int storageTime;
 	bool onParkingNow;
-
+public:
 	//Default constructor
 	Car() : Car("Not added", "Not added", 1, 1000, true, 1, true) {
 	}
@@ -31,6 +31,49 @@ public:
 	~Car() {
 
 	}
+
+	void setBrand(string brand) {
+		this->brand = brand;
+	}
+	string getBrand() { return brand; }
+
+	void setModel(string model) {
+		this->model = model;
+	}
+	string getModel() { return model; }
+
+	void setAge(int age) {
+		if (age > 0 && age < 100) {
+			this->age = age;
+		}
+	}
+	int getAge() { return age; }
+
+	void setPrice(int price) {
+		if (price > 0) {
+			this->price = price;
+		}
+	}
+	int getPrice() { return price; }
+
+	void setUnbroken(bool unbroken) {
+		this->unbroken = unbroken;
+	}
+	bool isUnbroken() { return unbroken; }
+
+	void setStorageTime(int storageTime) {
+		if (storageTime > 1 && storageTime < (365 * 5)) {
+			this->storageTime = storageTime;
+		}
+	}
+	int getStorageTime() { return storageTime; }
+
+	void setOnParkingNow(bool onParkingNow) {
+		this->onParkingNow = onParkingNow;
+	}
+	bool isOnParkingNow() { return onParkingNow; }
+
+
 
 	string getInfo() {
 		string msg = "Brand: " + brand + "; Model: " + model + "\nAge: "

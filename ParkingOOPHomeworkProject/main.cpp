@@ -3,20 +3,9 @@
 #include "Security.h"
 
 int main() {
-	int amount;
-	cout << "Amount of cars: ";
-	cin >> amount;
+	Car car1{};
 
-	Car* listOfCars = nullptr;
-
-	Initializer initializer;
-
-	initializer.init(listOfCars, amount);
-
-	for (int i = 0; i < amount; i++)
-	{
-		cout << listOfCars[i].getInfo() << " ";
-	}
+	cout << car1.getBrand();
 
 	return 0;
 }

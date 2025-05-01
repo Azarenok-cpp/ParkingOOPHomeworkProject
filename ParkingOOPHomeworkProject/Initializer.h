@@ -23,10 +23,10 @@ public:
 
 		for (int i = 0; i < count; i++)
 		{
-			list[i].brand = brands[rand() % 14];
-			list[i].age = rand() % (maxAge - minAge + 1) + minAge;
-			list[i].price = rand() % (maxPrice - minPrice + 1) + minPrice;
-			list[i].storageTime = rand() % (maxStorageTime - minStorageTime + 1) + minStorageTime;
+			list[i].setBrand(brands[rand() % 14]);
+			list[i].setAge(rand() % (maxAge - minAge + 1) + minAge);
+			list[i].setPrice(rand() % (maxPrice - minPrice + 1) + minPrice);
+			list[i].setStorageTime(rand() % (maxStorageTime - minStorageTime + 1) + minStorageTime);
 		}
 	}
 

@@ -3,9 +3,9 @@
 class Security {
 public:
 	void letCarOut(Car* car) {
-		car->onParkingNow = false;
+		car->setOnParkingNow(false);
 	}
 	void letCarIn(Car* car) {
-		car->onParkingNow = true;
+		car->setOnParkingNow(true);
 	}
 };
