@@ -1,16 +1,6 @@
 #include "Car.h"
 
 //Canonic constructor
-Car::Car(string brand, string model, int age, int price, bool unbroken,
-	int storageTime, bool onParkingNow) {
-	this->brand = brand;
-	this->model = model;
-	this->age = age;
-	this->price = price;
-	this->unbroken = unbroken;
-	this->storageTime = storageTime;
-	this->onParkingNow = onParkingNow;
-}
 
 
 void Car::setBrand(string brand) {

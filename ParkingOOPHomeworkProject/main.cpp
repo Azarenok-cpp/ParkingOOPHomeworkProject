@@ -1,10 +1,9 @@
 #include "main.h"
 #include "Car.h"
-#include "Security.h"
+
 
 int main() {
 	Car car1{};
-
-	cout << car1.isUnbroken();
+	cout<<car1.getAge();
 	return 0;
 }

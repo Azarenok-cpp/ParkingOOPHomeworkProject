@@ -15,7 +15,6 @@ public:
 	Car() : Car("Not added", "Not added", 1, 1000, true, 1, true) {
 	}
 
-	//Canonic constructor
 	Car(string brand, string model, int age, int price, bool unbroken,
 		int storageTime, bool onParkingNow) {
 		this->brand = brand;
@@ -27,63 +26,36 @@ public:
 		this->onParkingNow = onParkingNow;
 	}
 
+
 	//Destructor
 	~Car() {
 
 	}
 
-	void setBrand(string brand) {
-		this->brand = brand;
-	}
-	string getBrand() { return brand; }
+	void setBrand(string brand);
+	string getBrand();
 
-	void setModel(string model) {
-		this->model = model;
-	}
-	string getModel() { return model; }
+	void setModel(string model);
+	string getModel();
 
-	void setAge(int age) {
-		if (age > 0 && age < 100) {
-			this->age = age;
-		}
-	}
-	int getAge() { return age; }
+	void setAge(int age);
+	int getAge();
 
-	void setPrice(int price) {
-		if (price > 0) {
-			this->price = price;
-		}
-	}
-	int getPrice() { return price; }
+	void setPrice(int price);
+	int getPrice();
 
-	void setUnbroken(bool unbroken) {
-		this->unbroken = unbroken;
-	}
-	bool isUnbroken() { return unbroken; }
+	void setUnbroken(bool unbroken);
+	bool isUnbroken();
 
-	void setStorageTime(int storageTime) {
-		if (storageTime > 1 && storageTime < (365 * 5)) {
-			this->storageTime = storageTime;
-		}
-	}
-	int getStorageTime() { return storageTime; }
+	void setStorageTime(int storageTime);
+	int getStorageTime();
 
-	void setOnParkingNow(bool onParkingNow) {
-		this->onParkingNow = onParkingNow;
-	}
-	bool isOnParkingNow() { return onParkingNow; }
+	void setOnParkingNow(bool onParkingNow);
+	bool isOnParkingNow();
 
 
 
-	string getInfo() {
-		string msg = "Brand: " + brand + "; Model: " + model + "\nAge: "
-			+ to_string(age) + "; Price: " + to_string(price) + "\nStatus: "
-			+ (unbroken ? "unbroken" : "after an accident")
-			+ "\nWill be stored for " + to_string(storageTime) + " days"
-			+ "\nIs on the parking right now: " + (onParkingNow ? "yes" : "no")
-			+ "\n\n";
-		return msg;
-	}
+	string getInfo();
 
 
 };
