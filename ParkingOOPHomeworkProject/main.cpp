@@ -5,7 +5,6 @@
 int main() {
 	Car car1{};
 
-	cout << car1.getBrand();
-
+	cout << car1.isUnbroken();
 	return 0;
 }
