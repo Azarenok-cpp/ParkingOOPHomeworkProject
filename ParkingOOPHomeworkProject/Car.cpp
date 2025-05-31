@@ -1,8 +1,5 @@
 #include "Car.h"
 
-//Canonic constructor
-
-
 void Car::setBrand(string brand) {
 	this->brand = brand;
 }
@@ -46,13 +43,16 @@ bool Car::isOnParkingNow() { return onParkingNow; }
 
 
 
-string Car::getInfo() {
-	string msg = "Brand: " + brand + "; Model: " + model + "\nAge: "
-		+ to_string(age) + "; Price: " + to_string(price) + "\nStatus: "
-		+ (unbroken ? "unbroken" : "after an accident")
-		+ "\nWill be stored for " + to_string(storageTime) + " days"
-		+ "\nIs on the parking right now: " + (onParkingNow ? "yes" : "no")
-		+ "\n\n";
+string Car::toString() {
+	string msg = (brand != "Not added" && model != "Not added" 
+		? brand + " " + model : "N/A  ") +
+		+ " " + to_string(age) + "years;  " 
+		+ to_string(price) + "$;  "
+		+ (unbroken ? "unbroken  " : "after an accident  ")
+		+ to_string(storageTime) 
+		+ (storageTime == 1 ? " day" : " days") + " left  "
+		+ (onParkingNow ? "on parking now" : "not on parking now")
+		+ "\n";
 	return msg;
 }
 
